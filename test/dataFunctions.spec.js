@@ -2,12 +2,12 @@
 import { filterData, filterDataGeneration, sortData, computeStats } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';// se renombra como fakeData
 
-describe('Test para la funcion filterData', () => {
-  it('debe filtrar correctamente los Pokémon de tipo "Fire"', () => {
-    const filteredData = filterData(fakeData, 'type', 'fire');
-    // Agrega tus expectativas aquí, por ejemplo:
-    expect(filteredData.length).toBe(1);
-    expect(filteredData[0].name).toBe('ninetales');
+describe('Test para la funcion filterData', () => {//Se hace una descripcion de la peruebas contenidas y la funcion que se esta probando  
+  it('debe filtrar correctamente los Pokémon de tipo "Fire"', () => {//It nos sirve para describir una prueba especifica y las expectativas de la prueba 
+    const filteredData = filterData(fakeData, 'type', 'fire');//Se declara una variable la cual va a contener el resultado que le arroje cuando se llama a la funcion.
+    expect(filteredData.length).toBe(1);// expect es el resultado esperado dentro de las pruebas en este caso nos esta diciendo que entre la longitud de la fake data solo se encuentra un elemento con esas caracteristicas 
+    expect(filteredData[0].name).toBe('ninetales'); //Aqui la expectativa es que la funcion filter data es que nos regrese a ninetales 
+    //.tobe es una funcion que compara el resultado obtenido con el resultado esperado si estas coinciden pasa la prueba.
   })
   
 });
